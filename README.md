@@ -1,4 +1,4 @@
-# Neural Network and ML Algorithm Comparison Project
+# Banana Xanthomonas Wilt Detection Project
 
 ## Project Overview
 
@@ -19,7 +19,7 @@ The dataset used in this project is from Roboflow (www.roboflow.com) and contain
 | Instance 2                               | Adam           | None             | 10     | Yes            | 9                | 0.001         | 0.97     | 0.97      | 0.97      | 0.97   |
 | Instance 3                               | RMSprop        | L2               | 10     | Yes            | 8                | 0.001         | 0.76     | 0.69/0.80 | 1.00/0.67 | 0.53/1.00 |
 | Instance 4                               | SGD            | L1               | 10     | No             | 8                | 0.0001        | 0.97     | 0.97      | 0.97      | 0.97   |
-| Instance 5                               | ML Algorithm - Linear Regression |              |        |                |                  |               | 0.99     | 0.99      | 0.99      | 0.99   |
+| Instance 5                               | ML Algorithm-Logistic Regression |              |        |                |                  |               | 0.99     | 0.99      | 0.99      | 0.99   |
 
 ### Summary
 
@@ -42,7 +42,7 @@ Instance 4 used the SGD optimizer with L1 regularization and a lower learning ra
 
 ### Video Presentation
 
-The video covers the discussion of the table above, the libraries used, and the comparison of the neural network and ML algorithm.
+The video covers the discussion of the table above, the libraries used, and the comparison of the neural network and ML algorithm. 
 
 
 ### Instructions for Running the Notebook
