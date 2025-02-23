@@ -42,7 +42,7 @@ Instance 4 used the SGD optimizer with L1 regularization and a lower learning ra
 
 ### Video Presentation
 
-The video covers the discussion of the table above, the libraries used, and the comparison of the neural network and ML algorithm. 
+The video covers the discussion of the table above, the libraries used, and the comparison of the neural network and ML algorithm. https://youtu.be/y-MbfAj5XQ
 
 
 ### Instructions for Running the Notebook
