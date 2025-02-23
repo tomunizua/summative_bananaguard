@@ -12,39 +12,33 @@ The dataset used in this project is from Roboflow (www.roboflow.com) and contain
 
 ### Neural Network Training Instances
 
-| Training Instance | Optimizer Used | Regularizer Used | Epochs | Early Stopping | Number of Layers | Learning Rate | Accuracy | Loss | F1-score | Precision | Recall |
-|-------------------|----------------|------------------|--------|----------------|------------------|---------------|----------|------|----------|-----------|--------|
-| Instance 1        | Default        | None             | 10     | No             | 6                | Default       |          |      |          |           |        |
-| Instance 2        | Adam           | L2               | 10     | Yes            | 6                | 0.001         |          |      |          |           |        |
-| Instance 3        | RMSprop        | L1               | 10     | No             | 6                | 0.0001        |          |      |          |           |        |
-| Instance 4        | Adam           | L1 + L2          | 10     | Yes            | 6                | 0.01          |          |      |          |           |        |
-| Instance 5        | RMSprop        | None             | 10     | Yes            | 6                | 0.001         |          |      |          |           |        |
+
+| Training Instance                        | Optimizer Used | Regularizer Used | Epochs | Early Stopping | Number of Layers | Learning Rate | Accuracy | F1-score  | Precision | Recall |
+|------------------------------------------|----------------|------------------|--------|----------------|------------------|---------------|----------|-----------|-----------|--------|
+| Instance 1                               | None           | None             | 10     | No             | 8                | Default       |          |           |           |        |
+| Instance 2                               | Adam           | None             | 10     | Yes            | 9                | 0.001         | 0.97     | 0.97      | 0.97      | 0.97   |
+| Instance 3                               | RMSprop        | L2               | 10     | Yes            | 8                | 0.001         | 0.76     | 0.69/0.80 | 1.00/0.67 | 0.53/1.00 |
+| Instance 4                               | SGD            | L1               | 10     | No             | 8                | 0.0001        | 0.97     | 0.97      | 0.97      | 0.97   |
+| Instance 5                               | ML Algorithm - Linear Regression |              |        |                |                  |               | 0.99     | 0.99      | 0.99      | 0.99   |
 
 ### Summary
 
 #### Best Combination
 
-- The combination that worked best was Instance X (e.g., Instance 2) with the following configuration: 
-  - Optimizer: Adam
-  - Regularizer: L2
-  - Early Stopping: Yes
-  - Learning Rate: 0.001
-  - Accuracy: X%
-  - F1-score: X
-  - Precision: X
-  - Recall: X
+The combination that worked best was Instance 2 and 4, which performed equally well. Both instances achieved an accuracy of 0.97, and they excelled in F1-score, precision, and recall metrics.
+
+Instance 2 used the Adam optimizer with a learning rate of 0.001, no regularization, and early stopping enabled. This combination of optimizer and learning rate proved effective in achieving high performance.
+
+Instance 4 used the SGD optimizer with L1 regularization and a lower learning rate of 0.0001. Despite the lower learning rate, the model managed to achieve excellent performance, showcasing the benefit of regularization.
 
 #### Comparison of ML Algorithm and Neural Network
 
-- The neural network model with optimized hyperparameters outperformed the classical ML algorithm in terms of accuracy and F1-score.
-- The ML algorithm utilized for comparison was [insert ML algorithm name, e.g., Logistic Regression] with the following hyperparameters:
-  - Regularization: L2
-  - C: 1.0
+- The ML algorithm (Linear Regression) outperformed the neural network models in terms of accuracy and F1-score, achieving a perfect score of 0.99 in all metrics.
+- The ML algorithm utilized for comparison was Logistic Regression with the following hyperparameters:
+  - Regularization: None
   - Solver: lbfgs
-  - Accuracy: X%
-  - F1-score: X
-  - Precision: X
-  - Recall: X
+  - Maximum Iterations: 1000
+- The linear regression model's ability to achieve such high performance highlights its effectiveness in this particular task. Meanwhile, the neural network models, while powerful, did not reach the same level of accuracy and F1-score as the linear regression model.
 
 ### Video Presentation
 
@@ -55,9 +49,8 @@ The video covers the discussion of the table above, the libraries used, and the 
 
 1. Clone the repository to your local machine.
 2. Install the required dependencies.
-3. Open `notebook.ipynb` in Jupyter Notebook or any compatible environment.
-4. Follow the instructions in the notebook to run the code and load the best saved model.
+3. Open the notebook in Jupyter Notebook or any compatible environment.
+4. Follow the instructions in the notebook to run the code and navigate to the /saved_models directory to load the models.
 5. Use the provided code cells to make predictions on new data.
 
-Thank you for reviewing this project. If you have any questions or feedback, please feel free to reach out!
-
+Thank you for reviewing this project!
